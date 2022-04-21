@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Manrope);
 @import url(https://fonts.googleapis.com/css?family=Rubik);
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
 *,
 *::after,
 *::before {
@@ -68,6 +76,9 @@ body {
 }
 .card__btn:hover {
   box-shadow: 0 0 40px hsl(150deg, 100%, 66%);
+}
+.card__btn--clicked {
+  animation: roll 0.4s linear 1;
 }
 @media screen and (max-width: 550px) {
   .card {

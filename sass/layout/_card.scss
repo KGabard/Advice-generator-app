@@ -46,6 +46,9 @@ $card__btn-shadow: 0 0 40px $color-secondary;
         &:hover {
             box-shadow: $card__btn-shadow;
         }
+        &--clicked {
+            animation: roll 0.4s linear 1;
+        }
     }
     
     @include mobile-only {

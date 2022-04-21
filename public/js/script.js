@@ -22,6 +22,12 @@ function askForRandomQuote() {
     });
 }
 
-cardBtn.addEventListener('click', askForRandomQuote);
+cardBtn.addEventListener('click', () => {
+    cardBtn.classList.add('card__btn--clicked');
+    askForRandomQuote();
+    setTimeout(() => {
+        cardBtn.classList.remove('card__btn--clicked');
+    },400);
+});
 
 askForRandomQuote();
