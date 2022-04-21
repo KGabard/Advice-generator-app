@@ -10,6 +10,7 @@ function askForRandomQuote() {
         }
     })
     .then(function(value) {
+        console.log(value);
         adviceNumber.innerHTML = value.slip.id;
         cardQuote.innerHTML = 'Loading...';
         setTimeout(() => {
