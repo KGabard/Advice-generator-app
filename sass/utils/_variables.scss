@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope);
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+
+$color-primary: hsl(193, 38%, 86%);
+$color-secondary: hsl(150, 100%, 66%);
+
+$neutral-color-primary: hsl(217, 19%, 38%);
+$neutral-color-secondary: hsl(217, 19%, 24%);
+$neutral-color-tertiary: hsl(218, 23%, 16%);
+
+$typographies: (
+    header: (
+        font-family: ('Manrope', sans-serif),
+        color: $color-secondary,
+        font-size: 0.7rem,
+        font-weight: 800,
+        text-transform: uppercase,
+        letter-spacing: 0.3rem
+    ),
+    quote: (
+        font-family: ('Rubik', sans-serif),
+        color: $color-primary,
+        font-size: 1.7rem,
+        font-weight: 600
+    )
+);

@@ -1,0 +1,37 @@
+// @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+//     text-shadow: $offset $offset $colour;
+// }
+
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+
+@mixin mobile-only {
+    @media screen and (max-width:550px) {
+        @content;
+    }    
+}
+
+@mixin center($width, $height) {
+    position: absolute;
+    left: calc(50vw - $width / 2);
+    top: calc(50vh - $height / 2);
+}
+
+@mixin bottom-center($parent-width, $parent-height, $child-width, $child-height) {
+    position: absolute;
+    left: calc($parent-width / 2 - $child-width / 2);
+    top: calc($parent-height - $child-height / 2);
+}
+
+@mixin typographies($type) {
+    $typography: map-get($typographies, $type);
+    @each $attribute, $val in $typography {
+        #{$attribute} : #{$val};
+    }
+}

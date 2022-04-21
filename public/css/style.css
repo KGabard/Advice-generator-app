@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope);
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background: hsl(218deg, 23%, 16%);
+}
+
+.card {
+  width: 500px;
+  height: 300px;
+  background-color: hsl(217deg, 19%, 24%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 40px 60px 40px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: calc(50vw - 250px);
+  top: calc(50vh - 150px);
+}
+.card__header {
+  font-family: Manrope, sans-serif;
+  color: hsl(150deg, 100%, 66%);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  display: flex;
+  justify-content: center;
+}
+.card__quote {
+  font-family: Rubik, sans-serif;
+  color: hsl(193deg, 38%, 86%);
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (max-width: 550px) {
+  .card__quote {
+    font-size: min(1.7rem, 6.5vw);
+  }
+}
+.card__divider {
+  height: 15px;
+}
+.card__btn {
+  width: 56px;
+  height: 56px;
+  background-color: hsl(150deg, 100%, 66%);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  left: calc(50% - 28px);
+  top: calc(100% - 28px);
+}
+.card__btn:hover {
+  box-shadow: 0 0 40px hsl(150deg, 100%, 66%);
+}
+@media screen and (max-width: 550px) {
+  .card {
+    width: 90%;
+    left: 5%;
+    padding: 40px 20px 60px 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

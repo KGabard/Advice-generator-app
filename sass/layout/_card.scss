@@ -1,0 +1,56 @@
+$card-width: 500px;
+$card-height: 300px;
+$card-shadow: 0 0 50px rgba(0,0,0,0.3);
+
+$card__btn-width: 56px;
+$card__btn-height: 56px;
+$card__btn-shadow: 0 0 40px $color-secondary;
+
+.card {
+    width: $card-width;
+    height: $card-height;
+    background-color: $neutral-color-secondary;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 40px 60px 40px;
+    box-shadow: $card-shadow;
+    @include center($card-width, $card-height);
+    &__header {
+        @include typographies(header);
+        display: flex;
+        justify-content: center;
+    }
+    &__quote {
+        @include typographies(quote);
+        text-align: center;
+        @include mobile-only {
+            font-size: min(1.7rem, 6.5vw);
+        }
+    }
+    &__divider {
+        height: 15px;
+    }
+    &__btn {
+        width: $card__btn-width;
+        height: $card__btn-height;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include bottom-center(100%, 100%, $card__btn-width, $card__btn-height);
+        &:hover {
+            box-shadow: $card__btn-shadow;
+        }
+    }
+    
+    @include mobile-only {
+        width: 90%;
+        left: 5%;
+        padding: 40px 20px 60px 20px;
+    }
+}
